@@ -1,1 +1,11 @@
 /* You can add global styles to this file, and also import other style files */
+
+.primario {
+  background-color: #FFEAD0;
+}
+.secundario {
+  background-color: #D11149;
+}
+.acento {
+  background-color: #1A8FE3;
+}

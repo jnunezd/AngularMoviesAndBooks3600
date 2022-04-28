@@ -20,6 +20,11 @@ const routes: Routes = [
     component: ContactComponent
   },
   {
+    path: 'peliculas',
+    component: HomeComponent
+  },
+  
+  {
     path: '',
     redirectTo: 'home',
     pathMatch: 'full'

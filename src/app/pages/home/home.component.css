@@ -1,0 +1,10 @@
+.div-content{
+    max-height: 100vh;
+    min-height: 100vh;
+    max-width: 100vw;
+    min-width: 80vw;
+    overflow: scroll;}
+
+.home-posters{
+    height: 60vh;
+}
