@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { NotFoundError } from 'rxjs';
 import { AboutComponent } from './pages/about/about.component';
+import { BooksComponent } from './pages/books/books.component';
 import { ContactComponent } from './pages/contact/contact.component';
 import { HomeComponent } from './pages/home/home.component';
 import { NotFoundComponent } from './pages/not-found/not-found.component';
@@ -22,6 +23,10 @@ const routes: Routes = [
   {
     path: 'peliculas',
     component: HomeComponent
+  },
+  {
+    path: 'libros',
+    component: BooksComponent
   },
   
   {

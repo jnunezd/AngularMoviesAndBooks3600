@@ -3,8 +3,8 @@
     <section class="text-center container">
         <div class="row py-lg-5">
             <div class="col-lg-6 col-md-8 mx-auto">
-                <h1 class="fw-light">AiepFlix</h1>
-                <p class="lead text-muted">La mejor plataforma sobre ver series y peliculas.</p>
+                <h1 class="fw-light">AiepBooks</h1>
+                <p class="lead text-muted">La mejor tarea que va a recivir.</p>
 
                 <form class="d-flex">
                     <input name="textSearch" [(ngModel)]="textSearch" class="form-control mr-sm-2 pr-1" type="search"
@@ -19,7 +19,7 @@
 
     <div class="album py-5 bg-light">
         <div class="container">
-            <div class="alert alert-danger" role="alert" *ngIf="movieList.length == 0 && loading==false">
+            <div class="alert alert-danger" role="alert" *ngIf="booklist.length == 0 && loading==false">
                 No existen resultados para la busqueda
             </div>
             <div *ngIf="loading" class="d-flex justify-content-center pb-4">
@@ -29,20 +29,21 @@
             </div>
 
             <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
-                <div *ngFor="let movie of movieList" class="col">
+                <div *ngFor="let book of booklist" class="col">
                     <div class="card shadow">
-                        <img src="{{movie.Poster}}" class="card-img-top  home-posters" alt="...">
+                        <img src="{{book.volumeInfo.imageLinks.thumbnail}}" class="card-img-top  home-posters"
+                            alt="...">
 
                         <div class="card-body ">
-                            <p class="card-text">{{movie.Title}}</p>
+                            <p class="card-text">{{book.volumeInfo.title}}</p>
                             <div class="d-flex justify-content-between align-items-center">
                                 <div class="btn-group">
-                                    <a href="https://www.imdb.com/title/{{movie.imdbID}}/" target="blank" type="button"
-                                        class="btn btn-sm btn-outline-secondary">ImDb</a>
+                                    <a href="{{book.accessInfo.webReaderLink}}" target="blank" type="button"
+                                        class="btn btn-sm btn-outline-secondary">Leer</a>
 
 
                                 </div>
-                                <small class="text-muted">{{movie.Type}} {{movie.Year}}</small>
+                                <small class="text-muted">{{book.volumeInfo.publishedDate}}</small>
                             </div>
                         </div>
                     </div>

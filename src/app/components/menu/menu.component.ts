@@ -14,6 +14,11 @@ export class MenuComponent implements OnInit {
       icon:'bi-house'
     },
     {
+      url:'libros',
+      text:'Libros',
+      icon:'bi-house'
+    },
+    {
       url:'contact',
       text:'Contact',
       icon:'bi-house'
