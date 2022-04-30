@@ -4,11 +4,11 @@
         <div class="row py-lg-5">
             <div class="col-lg-6 col-md-8 mx-auto">
                 <h1 class="fw-light">AiepBooks</h1>
-                <p class="lead text-muted">La mejor tarea que va a recivir.</p>
+                <p class="lead text-muted">La mejor tarea que va a recibir.</p>
 
                 <form class="d-flex">
                     <input name="textSearch" [(ngModel)]="textSearch" class="form-control mr-sm-2 pr-1" type="search"
-                        placeholder="Ingrece el titulo a buscar" aria-label="Search">
+                        placeholder="Ingrece el titulo a buscar" aria-label="Search" required>
                     <button (click)="onClickSearch()" class="btn btn-outline-success my-2 my-sm-0"
                         type="button">Buscar</button>
                 </form>
@@ -22,6 +22,9 @@
             <div class="alert alert-danger" role="alert" *ngIf="booklist.length == 0 && loading==false">
                 No existen resultados para la busqueda
             </div>
+            <div class="alert alert-danger" role="alert" *ngIf="error">
+                Debes ingresar un titulo a buscar
+            </div>
             <div *ngIf="loading" class="d-flex justify-content-center pb-4">
                 <div class="spinner-border" role="status">
                     <span class="visually-hidden">Loading...</span>
@@ -31,7 +34,7 @@
             <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
                 <div *ngFor="let book of booklist" class="col">
                     <div class="card shadow">
-                        <img src="{{book.volumeInfo.imageLinks.thumbnail}}" class="card-img-top  home-posters"
+                        <img src="{{book.volumeInfo.imageLinks.smallThumbnail}}" class="card-img-top  home-posters"
                             alt="...">
 
                         <div class="card-body ">

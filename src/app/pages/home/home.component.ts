@@ -16,8 +16,10 @@ export class HomeComponent implements OnInit {
   constructor(private service:MoviesService) { }
 
   ngOnInit(): void {
+    this.loading = true
     this.service.getDataMovies().subscribe(
       resp => {
+        this.loading = false
         this.movieList = resp.Search
       }
     )

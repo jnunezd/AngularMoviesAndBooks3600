@@ -16,17 +16,17 @@ export class MenuComponent implements OnInit {
     {
       url:'libros',
       text:'Libros',
-      icon:'bi-house'
+      icon:'bi-book'
     },
     {
       url:'contact',
       text:'Contact',
-      icon:'bi-house'
+      icon:'bi-envelope'
     },
     {
       url:'about',
       text:'About',
-      icon:'bi-house'
+      icon:'bi-info-circle'
     },
     
     
